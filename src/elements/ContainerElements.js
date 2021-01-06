@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ContainerWrapper = styled.div`
+export const ContainerWrapper = styled.main`
     height: 100%;
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(1920px, 60rem)) 1fr;
