@@ -23,15 +23,10 @@ export default function Home({ data }) {
 export const query = graphql`
   {
     projects: allContentfulPortfolio {
-        nodes {
-        title
-        image {
-            fluid {
-            src
-            }
-        }
-        slug
-        }
+    nodes {
+      ...project
+      id
     }
   }
+}
 `;

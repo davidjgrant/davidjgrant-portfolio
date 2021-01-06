@@ -10,3 +10,16 @@ export const Portfolio = ( {children} ) => {
     )
 }
 export default Portfolio
+
+export const query = graphql`
+  fragment project on ContentfulPortfolio {
+  title
+  image {
+    fluid {
+      src
+    }
+    description
+  }
+  slug
+}
+`;
