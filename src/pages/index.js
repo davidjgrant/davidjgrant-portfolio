@@ -1,18 +1,12 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
-import HomepageLayout from "../components/HomepageLayout"
-import SEO from "../components/SEO"
-import About from "../components/About"
-import Footer from "../components/Footer"
-import Projects from "../components/Projects"
+import Container from '../components/Container'
+import Portfolio from "../components/Portfolio"
 
 export default function Home({ data }) {
   return (
-    <HomepageLayout>
-      <SEO title="Home" />
-      <About />
-      <Footer />
-      <Projects>
+    <Container>
+      <Portfolio>
         {data.projects.nodes.map(project => (
                 <div key={`${project.slug}`}>
                     <Link to={`/${project.slug}`}>
@@ -21,8 +15,8 @@ export default function Home({ data }) {
                     </Link>
                 </div>
             ))}
-      </Projects>
-    </HomepageLayout>
+      </Portfolio>
+    </Container>
   )
 }
 
