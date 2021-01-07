@@ -10,7 +10,7 @@ export const query = graphql`
     author {
       name
       profile {
-        fluid {
+        fluid(maxWidth: 100, quality: 75, cropFocus: CENTER) {
           src
         }
       }
@@ -40,7 +40,7 @@ const projectTemplate = ({ data: { project } }) => {
             <h1>{project.title}</h1>
             <div>
                 <p>{project.author.name}</p>
-                <img src={`${`${project.author.profile.fluid.src}`}?w=50&q=100`} alt="David Grants Profile"/>
+                <img src={`${`${project.author.profile.fluid.src}`}`} alt="David Grants Profile"/>
             </div>
             <p>{project.published}</p>
             <div>{documentToReactComponents(project.bodyRichText.json, {
@@ -50,7 +50,7 @@ const projectTemplate = ({ data: { project } }) => {
                     ),
                     [BLOCKS.EMBEDDED_ASSET]: node => (
                         <img
-                            src={`${node.data.target.fields.file["en-US"].url}?w=500&q=100`}
+                            src={`${node.data.target.fields.file["en-US"].url}?w=600&q=100`}
                             alt={node.data.target.fields.title["en-US"]}
                         />
                     ),

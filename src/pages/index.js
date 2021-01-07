@@ -10,8 +10,8 @@ export default function Home({ data }) {
         {data.projects.nodes.map(project => (
                 <div className="projects" key={`${project.slug}`}>
                     <Link to={`/${project.slug}`}>
+                        <img src={`${project.image.fluid.src}`} alt={`${project.image.description}`}/>
                         <h2>{project.title}</h2>
-                        <img src={`${project.image.fluid.src}?w=250&q=100`} alt={`${project.image.description}`}/>
                     </Link>
                 </div>
             ))}

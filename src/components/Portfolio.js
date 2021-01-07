@@ -16,10 +16,9 @@ export const query = graphql`
   fragment project on ContentfulPortfolio {
   title
   image {
-    fluid {
+    fluid(maxWidth: 350, resizingBehavior: FILL, quality: 75, cropFocus: CENTER) {
       src
     }
-    description
   }
   slug
 }
