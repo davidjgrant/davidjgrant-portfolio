@@ -1,10 +1,8 @@
-import React from 'react'
-import { ContainerWrapper } from '../elements'
+import React from "react"
+import { ContainerWrapper } from "../elements"
 
-const Container = ({children}) => {
+export const Container = ({children}) => {
     return (
         <ContainerWrapper>{children}</ContainerWrapper>
     )
 }
-
-export default Container
