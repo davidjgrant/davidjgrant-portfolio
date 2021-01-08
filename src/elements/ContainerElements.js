@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
 export const ContainerWrapper = styled.main`
-    height: 100%;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(1920px, 60rem)) 1fr;
-    grid-template-rows: 7.8rem 20rem 5rem auto;
-    gap: 0 2rem;
+    grid-template-columns: 1fr repeat(2, 4fr) 1fr;
+    grid-template-rows: calc(100vh - 80px) 1fr;
 
     
 `;
