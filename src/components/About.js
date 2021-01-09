@@ -5,7 +5,6 @@ export const About = () => {
     return (
         <AboutWrapper>
             Hello
-            
         </AboutWrapper>
     )
 }

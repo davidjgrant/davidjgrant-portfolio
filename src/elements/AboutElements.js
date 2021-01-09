@@ -8,4 +8,14 @@ export const AboutWrapper = styled.div`
     justify-content: center;
     align-items: center;
     background-color: red;
+
+    @media ${props => props.theme.breakpoints.tablet} {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        grid-column: 1;
+        grid-row: 1;
+    }
 `;

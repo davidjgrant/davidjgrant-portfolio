@@ -9,4 +9,14 @@ export const HomepageFooterWrapper = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #bada55;
+
+    @media ${props => props.theme.breakpoints.tablet} {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        grid-column: 1;
+        grid-row: 3;
+    }
 `;
