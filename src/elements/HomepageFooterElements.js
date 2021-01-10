@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const HomepageFooterWrapper = styled.div`
+export const HomepageFooterWrapper = styled.footer`
     display: flex;
     grid-column: 2;
     grid-row: 2;
@@ -20,3 +20,29 @@ export const HomepageFooterWrapper = styled.div`
         grid-row: 3;
     }
 `;
+
+export const FooterItems = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        flex-direction: column;
+    }
+`
+export const FooterLinks = styled.div`
+    display: flex;
+    flex-direction: row;
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        margin-top: 10px;
+    }
+`
+
+export const FooterItem = styled.div`
+`
+
+export const FooterLink = styled.div`
+    margin: 0 10px;
+`
