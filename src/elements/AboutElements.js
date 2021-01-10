@@ -29,15 +29,24 @@ export const AboutWrapper = styled.div`
 export const AboutItems = styled.div`
     text-align: center;
     width: 55%;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
 `;
 
 export const ProfileImg = styled.img`
-
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    margin-bottom: 20px;
 `;
 
 export const Logo = styled.img`
-
+    height: 80px;
+    width: 300px;
+    background-color: black;
+    margin-bottom: 20px;
 `;
 
 export const Info = styled.p`
@@ -91,7 +100,7 @@ export const ContactButtons = styled.div`
 `;
 
 export const CVButton = styled(Link)`
-
+    margin-right: 2rem;
 `;
 
 export const ContactButton = styled(Link)`

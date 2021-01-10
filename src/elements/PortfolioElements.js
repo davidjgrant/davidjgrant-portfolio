@@ -31,6 +31,7 @@ export const PortfolioCard = styled.div`
     background-color: #ffffff;
     padding-bottom: 10px;
     border-radius: 15px 15px 10px 10px;
+    margin: 20px;
 
     h2 {
         margin-left: 2rem;

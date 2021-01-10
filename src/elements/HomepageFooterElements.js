@@ -31,6 +31,7 @@ export const FooterItems = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 
     @media ${props => props.theme.breakpoints.mobile} {
         flex-direction: column;

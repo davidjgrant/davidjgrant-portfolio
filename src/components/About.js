@@ -6,19 +6,19 @@ export const About = () => {
     return (
         <AboutWrapper>
             <AboutItems>
-                <ProfileImg />
-                <Logo />
+                <ProfileImg alt="Profile Picture" title="Profile Picture" />
+                <Logo alt="DavidJGrant Logo" title="DavidJGrant Logo" />
                 <AboutInfo />
                 <SocialIcons>
-                    <SocialIconLink href="https://www.linkedin.com/in/davidjohngrant/" target="_blank"><LinkedIn /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank"><Dribbble /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank"><Github /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank"><Medium /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank"><Spotify /></SocialIconLink>
+                    <SocialIconLink href="https://www.linkedin.com/in/davidjohngrant/" target="_blank" title="LinkedIn Icon"><LinkedIn /></SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" title="Dribble Icon" ><Dribbble /></SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" title="Github Icon" ><Github /></SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" title="Medium Icon" ><Medium /></SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" title="Spotify Icon" ><Spotify /></SocialIconLink>
                 </SocialIcons>
                 <ContactButtons>
-                    <CVButton target="_blank">CV</CVButton>
-                    <ContactButton target="_blank">Contact Me</ContactButton>
+                    <CVButton to="/" target="_blank">CV</CVButton>
+                    <ContactButton to="/" target="_blank">Email</ContactButton>
                 </ContactButtons>
             </AboutItems>
         </AboutWrapper>
