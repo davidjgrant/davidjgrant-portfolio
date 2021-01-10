@@ -1,14 +1,19 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const HomepageFooterWrapper = styled.footer`
     display: flex;
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #bada55;
+
+    @media ${props => props.theme.breakpoints.wide} {
+        grid-column: 2;
+    }
 
     @media ${props => props.theme.breakpoints.tablet} {
         grid-column: 1;
@@ -41,8 +46,9 @@ export const FooterLinks = styled.div`
 `
 
 export const FooterItem = styled.div`
+
 `
 
-export const FooterLink = styled.div`
+export const FooterLink = styled(Link)`
     margin: 0 10px;
 `

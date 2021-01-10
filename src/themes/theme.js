@@ -14,6 +14,7 @@ export default {
     breakpoints: {
         mobile: "only screen and (max-width: 50rem)",
         tablet: "only screen and (max-width: 65rem)",
+        wide: "only screen and (min-width: 130rem)",
     },
     spacings: {
         xSmall: ".5rem",
