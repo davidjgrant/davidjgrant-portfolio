@@ -9,14 +9,22 @@ export const AboutInfo = () => (
     query={graphql`
       {
         allContentfulHomepageAbout {
-          nodes {
+          edges {
+          node {
             description {
               description
             }
           }
         }
+        }
       }
     `}
-    render={data => <Info>{JSON.stringify(data, null, 4)}</Info>}
+    render={data => (
+      <div>
+        {data.allContentfulHomepageAbout.edges.map(edge => (
+                    <Info>{edge.node.description.description}</Info>
+                ))}
+      </div>
+    )}
   />
 )
