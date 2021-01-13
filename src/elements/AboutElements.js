@@ -9,7 +9,6 @@ export const AboutWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
 
     @media ${props => props.theme.breakpoints.wide} {
         grid-column: 2;

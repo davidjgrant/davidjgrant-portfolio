@@ -3,7 +3,9 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import { PortfolioWrapper, PortfolioCard } from "../elements"
 
 export const Portfolio = () => (
+
   <StaticQuery
+
     query={ graphql`
       query PortfolioQuery {
         projects: allContentfulPortfolio {
@@ -22,6 +24,7 @@ export const Portfolio = () => (
         }
       }
     `}
+
         render={data => (
           <PortfolioWrapper>
               {data.projects.edges.map(edge => (
@@ -32,7 +35,10 @@ export const Portfolio = () => (
                       </Link>
                   </PortfolioCard>
               ))}
+
           </PortfolioWrapper>
         )}
   />
-)
+  
+)     
+
