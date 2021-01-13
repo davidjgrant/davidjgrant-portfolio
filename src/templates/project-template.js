@@ -2,7 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
-import { Header } from "../components"
+import { Header, Project } from "../components"
+import { ProjectSubTitle } from "../elements"
 
 export const query = graphql`
   query ($slug: String!) {
@@ -16,7 +17,6 @@ export const query = graphql`
     bodyRichText {
       json
     }
-    published(formatString: "Do MMMM, YYYY")
     seo {
       title
       description {
@@ -30,12 +30,13 @@ export const query = graphql`
 const projectTemplate = ({ data: { project } }) => {
     return (
         
-        <div>
+        <>
             <Header />
-            <div>{documentToReactComponents(project.bodyRichText.json, {
+            <Project>
+              {documentToReactComponents(project.bodyRichText.json, {
                 renderNode: {
                     [BLOCKS.HEADING_1]: (_node, children) => (
-                        <h2 style={{ color: "red"}}>{children}</h2>
+                        <ProjectSubTitle>{children}</ProjectSubTitle>
                     ),
                     [BLOCKS.EMBEDDED_ASSET]: node => (
                         <img
@@ -44,9 +45,10 @@ const projectTemplate = ({ data: { project } }) => {
                         />
                     ),
                 },
-            })}</div>
+              })}
+            </Project>
             
-        </div>
+        </>
     )
 }
 

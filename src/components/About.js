@@ -23,11 +23,11 @@ export const About = () => {
                     }
                     `}
                     render={data => (
-                    <div>
-                        {data.allContentfulHomepageAbout.edges.map(edge => (
-                                    <Info>{edge.node.description.description}</Info>
-                                ))}
-                    </div>
+                        <>
+                            {data.allContentfulHomepageAbout.edges.map(edge => (
+                                <Info>{edge.node.description.description}</Info>
+                            ))}
+                        </>
                     )}
                 />
                 <SocialIcons>

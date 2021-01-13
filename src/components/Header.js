@@ -14,6 +14,7 @@ export const Header = () => (
             }
           }
         }
+        published(formatString: "Do MMMM, YYYY")
       }
     `}
     render={data => <pre>{JSON.stringify(data, null, 4)}</pre>}
