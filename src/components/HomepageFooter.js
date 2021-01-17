@@ -5,7 +5,7 @@ export const HomepageFooter = () => {
     return (
         <HomepageFooterWrapper>
             <FooterItems>
-                <FooterItem>© 2019–2021 DavidJGrant</FooterItem>
+                <FooterItem>© 2021 DavidJGrant</FooterItem>
                 <FooterLinks>
                     <FooterLink to="/AboutPage">About Me</FooterLink>
                     <FooterLink to="/ContactPage">Contact Me</FooterLink>
