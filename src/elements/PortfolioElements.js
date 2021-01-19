@@ -10,7 +10,7 @@ export const PortfolioWrapper = styled.div`
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: ${props => props.color ? props.color : "red"};
 
     @media ${props => props.theme.breakpoints.wide} {
         grid-column: 3;
@@ -39,5 +39,9 @@ export const PortfolioCard = styled.div`
 
     img {
         border-radius: 10px 10px 0 0;
+    }
+
+    a:nth-child(1) {
+        
     }
 `

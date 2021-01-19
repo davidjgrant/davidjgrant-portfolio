@@ -1,9 +1,10 @@
-import React from "react"
+import React from 'react'
 import { graphql, StaticQuery, Link } from "gatsby"
 import { PortfolioWrapper, PortfolioCard } from "../elements"
 
-export const Portfolio = () => (
+export const Portfolio = () => {
 
+return (
   <StaticQuery
 
     query={ graphql`
@@ -25,8 +26,11 @@ export const Portfolio = () => (
       }
     `}
 
-        render={data => (
-          <PortfolioWrapper>
+        render={data => {
+
+          return (
+            <PortfolioWrapper>
+
               {data.projects.edges.map(edge => (
                   <PortfolioCard key={`${edge.node.slug}`}>
                       <Link to={`/${edge.node.slug}`}>
@@ -35,10 +39,12 @@ export const Portfolio = () => (
                       </Link>
                   </PortfolioCard>
               ))}
+            </PortfolioWrapper>
+          )
+          
+        }}
+    />
+  )
+}
 
-          </PortfolioWrapper>
-        )}
-  />
-  
-)     
 
