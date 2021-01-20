@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const PortfolioWrapper = styled.div`
     height: 100%;
@@ -10,7 +11,6 @@ export const PortfolioWrapper = styled.div`
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    background-color: ${props => props.color ? props.color : "red"};
 
     @media ${props => props.theme.breakpoints.wide} {
         grid-column: 3;
@@ -25,10 +25,18 @@ export const PortfolioWrapper = styled.div`
         grid-column: 1;
         grid-row: 2;
     }
+
+    & a:nth-child(1) {
+        background-color: red;
+    }
+
+    & a:nth-child(2) {
+        background-color: blue;
+    }
+
 `;
 
-export const PortfolioCard = styled.div`
-    background-color: #ffffff;
+export const Card = styled(Link)`
     padding-bottom: 10px;
     border-radius: 15px 15px 10px 10px;
     margin: 20px;
@@ -39,9 +47,5 @@ export const PortfolioCard = styled.div`
 
     img {
         border-radius: 10px 10px 0 0;
-    }
-
-    a:nth-child(1) {
-        
     }
 `

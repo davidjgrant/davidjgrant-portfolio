@@ -3,12 +3,21 @@ import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
 import { Header, Project } from "../components"
-import { ProjectSubTitle } from "../elements"
+import { HeaderAuthor, HeaderAuthorName, HeaderAuthorProfile, HeaderPublished, HeaderTitle, ProjectSubTitle } from "../elements"
 
 export const query = graphql`
   query ($slug: String!) {
     project: contentfulPortfolio(slug: {eq: $slug }) {
-        ...Header
+      title
+      published
+      author {
+        name
+        profile {
+          fluid(maxWidth: 100, quality: 75, cropFocus: CENTER) {
+            src
+          }
+        }
+      }
     image {
       fluid {
         src
@@ -31,7 +40,14 @@ const projectTemplate = ({ data: { project } }) => {
     return (
         
         <>
-            <Header />
+            <Header>
+              <HeaderTitle>{project.title}</HeaderTitle>
+              <HeaderAuthor>
+                <HeaderAuthorProfile src={project.author.profile.fluid.src} />
+                <HeaderAuthorName>{project.author.name}</HeaderAuthorName>
+              </HeaderAuthor>
+              <HeaderPublished>{project.published}</HeaderPublished>
+            </Header>
             <Project>
               {documentToReactComponents(project.bodyRichText.json, {
                 renderNode: {

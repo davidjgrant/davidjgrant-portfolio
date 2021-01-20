@@ -1,8 +1,11 @@
-import React from 'react'
-import { graphql, StaticQuery, Link } from "gatsby"
-import { PortfolioWrapper, PortfolioCard } from "../elements"
+import React, { useState } from "react"
+import { graphql, StaticQuery } from "gatsby"
+import { PortfolioWrapper } from "../elements"
+import PortfolioCard from "./PortfolioCard"
 
 export const Portfolio = () => {
+
+  const [color, setColor] = useState(`yellow`);
 
 return (
   <StaticQuery
@@ -29,14 +32,12 @@ return (
         render={data => {
 
           return (
-            <PortfolioWrapper>
+            <PortfolioWrapper style={{ backgroundColor: color }}>
 
               {data.projects.edges.map(edge => (
-                  <PortfolioCard key={`${edge.node.slug}`}>
-                      <Link to={`/${edge.node.slug}`}>
+                  <PortfolioCard key={`${edge.node.slug}`} to={`/${edge.node.slug}`} color="red" setColor={setColor}>
                           <img src={`${edge.node.image.fluid.src}`} alt={`${edge.node.image.description}`}/>
                           <h2>{edge.node.title}</h2>
-                      </Link>
                   </PortfolioCard>
               ))}
             </PortfolioWrapper>
