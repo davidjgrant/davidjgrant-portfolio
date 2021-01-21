@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 export const PortfolioWrapper = styled.div`
     height: 100%;
@@ -26,17 +25,17 @@ export const PortfolioWrapper = styled.div`
         grid-row: 2;
     }
 
-    & a:nth-child(1) {
+    div:nth-child(1) {
         background-color: red;
     }
 
-    & a:nth-child(2) {
+    div:nth-child(2) {
         background-color: blue;
     }
 
 `;
 
-export const Card = styled(Link)`
+export const Card = styled.div`
     padding-bottom: 10px;
     border-radius: 15px 15px 10px 10px;
     margin: 20px;

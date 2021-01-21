@@ -5,10 +5,9 @@ function PortfolioCard({color, setColor, children}) {
 
     return(
         <Card
-            // className={color}
-            onMouseOver={() => {
-          setColor(color);
-        }}>{children}</Card>
+            className={color}
+            onMouseOver={() => {setColor(color);}}>{children}
+        </Card>
         )
 }
 export default PortfolioCard;

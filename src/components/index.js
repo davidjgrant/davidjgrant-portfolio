@@ -1,4 +1,5 @@
 export * from "./Container"
+export * from "./ProjectContainer"
 export * from "./Portfolio"
 export * from "./About"
 export * from "./Header"

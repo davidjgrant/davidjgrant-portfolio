@@ -1,4 +1,5 @@
 export * from "./ContainerElements"
+export * from "./ProjectContainerElements"
 export * from "./PortfolioElements"
 export * from "./AboutElements"
 export * from "./HomepageFooterElements"

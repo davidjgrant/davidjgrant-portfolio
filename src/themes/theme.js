@@ -6,8 +6,8 @@ export default {
     colors: {
         main1: "hsl(207,70%,59%)",
         main2: "hsl(207,70%,94%)",
-        light1: "hsl(0,0%,97%)",
-        light2: "hsl(227,2%,12%)",
+        light1: "hsl(0,0%,92%)",
+        light2: "hsl(0,0%,97%)",
         dark1: "hsl(227,2%,26%)",
         dark2: "hsl(0,0%,99%)",
     },
@@ -22,6 +22,7 @@ export default {
         medium: "2rem",
         large: "3rem",
         xLarge: "4rem",
+        xxLarge: "5rem",
     },
     animations: {
         button: "box-shadow 0.3s ease",
