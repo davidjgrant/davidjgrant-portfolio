@@ -11,23 +11,15 @@ export const About = () => {
                 <StaticQuery
                     query={graphql`
                     {
-                        allContentfulHomepageAbout {
-                        edges {
-                        node {
+                        contentfulHomepageAbout {
                             description {
-                            description
+                                description
                             }
-                        }
-                        }
                         }
                     }
                     `}
                     render={data => (
-                        <>
-                            {data.allContentfulHomepageAbout.edges.map(edge => (
-                                <Info>{edge.node.description.description}</Info>
-                            ))}
-                        </>
+                        <Info>{data.contentfulHomepageAbout.description.description}</Info>
                     )}
                 />
                 <SocialIcons>
