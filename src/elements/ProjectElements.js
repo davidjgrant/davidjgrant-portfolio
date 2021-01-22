@@ -17,6 +17,7 @@ export const ProjectWrapper = styled.main`
     p {
         font-size: 1.1rem;
         line-height: 1.5;
+        color: #08080B;
     }
 
 

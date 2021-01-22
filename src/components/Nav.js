@@ -1,10 +1,30 @@
 import React from "react"
-import { NavWrapper } from "../elements"
+import { useStaticQuery, graphql } from "gatsby"
+import { NavWrapper, NavLogo, IconsWrapper, ClipboardIcon, DarkModeIcon } from "../elements"
 
 export const Nav = () => {
+
+    const data = useStaticQuery(graphql`
+        query {
+            contentfulHomepageAbout {
+                logo {
+                    fluid {
+                        src
+                        }
+                    }
+                }
+            }
+    `)
+
     return (
         <NavWrapper>
-            This is a Nav
+            <NavLogo to="/">
+                <img src={data.contentfulHomepageAbout.logo.fluid.src} alt="#" />
+            </NavLogo>
+            <IconsWrapper>
+                <ClipboardIcon />
+                <DarkModeIcon />
+            </IconsWrapper>
         </NavWrapper>
     )
 }
