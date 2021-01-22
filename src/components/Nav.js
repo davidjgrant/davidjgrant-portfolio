@@ -19,7 +19,7 @@ export const Nav = () => {
     return (
         <NavWrapper>
             <NavLogo to="/">
-                <img src={data.contentfulHomepageAbout.logo.fluid.src} alt="#" />
+                <img src={data.contentfulHomepageAbout.logo.fluid.src} alt="DavidJGrant Logo" />
             </NavLogo>
             <IconsWrapper>
                 <ClipboardIcon />

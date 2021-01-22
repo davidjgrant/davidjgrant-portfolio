@@ -6,7 +6,8 @@ export const NavWrapper = styled.div`
     grid-row: 1;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
 
     @media ${props => props.theme.breakpoints.tablet} {
@@ -21,18 +22,29 @@ export const NavWrapper = styled.div`
 
 export const NavLogo = styled(Link)`
 
+    img {
+        height: 40px;
+    }
 `
 
 export const IconsWrapper = styled.div`
-
+    display: flex;
 `
 
 export const ClipboardIcon = styled.div`
-
+    background-color: red;
+    height: 40px;
+    width: 40px;
+    margin: 1rem;
+    cursor: pointer;
 `
 
 export const DarkModeIcon = styled.div`
-
+    background-color: blue;
+    height: 40px;
+    width: 40px;
+    margin: 1rem;
+    cursor: pointer;
 `
 
 
