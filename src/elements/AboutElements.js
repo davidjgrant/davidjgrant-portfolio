@@ -37,14 +37,13 @@ export const AboutItems = styled.div`
 export const ProfileImg = styled.img`
     height: 100px;
     width: 100px;
-    background-color: orange;
     margin-bottom: 20px;
+    border-radius: 50%;
 `;
 
 export const Logo = styled.img`
-    height: 80px;
+    height: auto;
     width: 300px;
-    background-color: black;
     margin-bottom: 20px;
 `;
 
