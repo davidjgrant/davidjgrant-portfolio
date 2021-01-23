@@ -48,3 +48,26 @@ export const Card = styled.div`
         border-radius: 10px 10px 0 0;
     }
 `
+
+export const CardImageWrapper = styled.div`
+    height: 275px;
+    width: 350px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+
+    @media ${props => props.theme.breakpoints.wide} {
+        height: 400px;
+        width: 500px;
+    }
+
+    @media ${props => props.theme.breakpoints.tablet} {
+        height: 250px;
+        width: 325px;
+    }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        height: 200px;
+        width: 300px;
+    }
+`

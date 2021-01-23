@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
 import { PortfolioWrapper } from "../elements"
-import PortfolioCard from "./PortfolioCard"
+import { PortfolioCard, CardImage } from "../components"
 
 export const Portfolio = () => {
 
@@ -17,9 +17,8 @@ return (
             node {
               title
               image {
-                fluid(maxWidth: 350, resizingBehavior: FILL, quality: 75, cropFocus: CENTER) {
-                  src
-                  
+                fluid(maxWidth: 350, resizingBehavior: FILL, quality: 100, cropFocus: CENTER) {
+                  ...GatsbyContentfulFluid  
                 }
               }
               slug
@@ -37,7 +36,7 @@ return (
               {data.projects.edges.map(edge => (
                   <PortfolioCard key={`${edge.node.slug}`} color="red" setColor={setColor}>
                     <Link to={`/${edge.node.slug}`}>
-                      <img src={`${edge.node.image.fluid.src}`} alt={`${edge.node.image.description}`}/>
+                      <CardImage fluid={edge.node.image.fluid} alt={`${edge.node.image.description}`}/>
                       <h2>{edge.node.title}</h2>
                     </Link>
                   </PortfolioCard>

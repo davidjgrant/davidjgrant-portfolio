@@ -1,7 +1,7 @@
 import React from "react"
 import { Card } from "../elements"
 
-function PortfolioCard({color, setColor, children}) {
+export function PortfolioCard({color, setColor, children}) {
 
     return(
         <Card
@@ -10,4 +10,3 @@ function PortfolioCard({color, setColor, children}) {
         </Card>
         )
 }
-export default PortfolioCard;
