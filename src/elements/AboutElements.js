@@ -27,11 +27,24 @@ export const AboutWrapper = styled.div`
 
 export const AboutItems = styled.div`
     text-align: center;
-    width: 55%;
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+
+    @media ${props => props.theme.breakpoints.wide} {
+        max-width: 30rem;
+    }
+
+    @media ${props => props.theme.breakpoints.tablet} {
+        max-width: 25rem;
+    }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        max-width: 18rem;
+    }
+
 `;
 
 export const ProfileImg = styled.img`
@@ -55,11 +68,19 @@ export const SocialIcons = styled.div`
     display: flex;
     justify-content: center;
     margin: 2rem;
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        margin: 0.5rem;
+    }
 `;
 
 export const SocialIconLink = styled.a`
     text-decoration: none;
     margin: 0 1rem;
+    
+    @media ${props => props.theme.breakpoints.mobile} {
+        margin: 0.5rem;
+    }
 `;
 
 export const LinkedIn = styled.img`

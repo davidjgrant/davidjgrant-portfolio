@@ -68,6 +68,6 @@ export const CardImageWrapper = styled.div`
 
     @media ${props => props.theme.breakpoints.mobile} {
         height: 200px;
-        width: 300px;
+        width: 280px;
     }
 `
