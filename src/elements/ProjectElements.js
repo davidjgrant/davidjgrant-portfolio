@@ -21,6 +21,9 @@ export const ProjectContainerWrapper = styled.div`
 export const ProjectWrapper = styled.main`
     grid-column: 2 / span 12;
     grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: ${props => props.theme.colors.light2};
     padding: ${props => `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`};
 
@@ -35,19 +38,32 @@ export const ProjectWrapper = styled.main`
     p {
         font-size: 1.1rem;
         line-height: 1.5;
+        margin-top: 1rem;
         color: #08080B;
+
+    }
+
+    hr {
+        margin: 3rem 2rem;
+        width: 100%;
+        color: #f1f1f1;
     }
 `
 
 export const ProjectSubTitle = styled.h2`
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
 `
 
+export const ProjectHeadingThree = styled.h3`
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+`
+
 export const ProjectImage = styled.img`
     margin: 2rem 0;
-
-    
 `

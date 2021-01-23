@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
 import { Header, Project, FeatureImage, ProjectContainer } from "../components"
-import { HeaderAuthor, HeaderAuthorName, HeaderAuthorProfile, HeaderPublished, HeaderTitle, ProjectSubTitle, ProjectImage } from "../elements"
+import { HeaderAuthor, HeaderAuthorName, HeaderAuthorProfile, HeaderPublished, HeaderTitle, ProjectSubTitle, ProjectHeadingThree, ProjectImage } from "../elements"
 
 export const query = graphql`
   query ($slug: String!) {
@@ -56,7 +56,7 @@ const projectTemplate = ({ data: { project } }) => {
             <Project>
               {documentToReactComponents(project.bodyRichText.json, {
                 renderNode: {
-                    [BLOCKS.HEADING_1]: (_node, children) => (
+                    [BLOCKS.HEADING_2]: (_node, children) => (
                         <ProjectSubTitle>{children}</ProjectSubTitle>
                     ),
                     [BLOCKS.EMBEDDED_ASSET]: node => (
@@ -65,6 +65,9 @@ const projectTemplate = ({ data: { project } }) => {
                             alt={node.data.target.fields.title["en-US"]}
                             style={{width: "100%", height: "auto"}}
                         />
+                    ),
+                    [BLOCKS.HEADING_3]: (_node, children) => (
+                        <ProjectHeadingThree>{children}</ProjectHeadingThree>
                     ),
                 },
               })}
