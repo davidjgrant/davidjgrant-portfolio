@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
-import { Header, Project, ProjectContainer } from "../components"
+import { Header, Project, FeatureImage, ProjectContainer } from "../components"
 import { HeaderAuthor, HeaderAuthorName, HeaderAuthorProfile, HeaderPublished, HeaderTitle, ProjectSubTitle, ProjectImage } from "../elements"
 
 export const query = graphql`
@@ -18,18 +18,18 @@ export const query = graphql`
           }
         }
       }
-    image {
-      fluid {
-        src
+      featureImage {
+        fluid(quality: 100, cropFocus: CENTER) {
+            ...GatsbyContentfulFluid
+        }
       }
-    }
-    bodyRichText {
-      json
-    }
-    seo {
-      title
-      description {
-        description
+      bodyRichText {
+        json
+      }
+      seo {
+        title
+        description {
+          description
       }
     }
   }
@@ -37,6 +37,9 @@ export const query = graphql`
 `
 
 const projectTemplate = ({ data: { project } }) => {
+
+  const featureImage = project.featureImage.fluid
+
     return (
         
         <ProjectContainer>
@@ -49,6 +52,7 @@ const projectTemplate = ({ data: { project } }) => {
               </HeaderAuthor>
               
             </Header>
+            <FeatureImage fluid={featureImage} />
             <Project>
               {documentToReactComponents(project.bodyRichText.json, {
                 renderNode: {
