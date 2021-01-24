@@ -14,6 +14,7 @@ export const Portfolio = () => {
           node {
             title
             slug
+            color
             image {
               fluid {
                 ...GatsbyContentfulFluid
@@ -28,7 +29,7 @@ export const Portfolio = () => {
 return (
     <PortfolioWrapper style={{ backgroundColor: color }}>
       {data.projects.edges.map(edge => (
-        <PortfolioCard key={edge.node.slug} color="red" setColor={setColor}>
+        <PortfolioCard key={edge.node.slug} color={edge.node.color} setColor={setColor}>
           <Link to={`/${edge.node.slug}`}>
             <CardImage fluid={edge.node.image.fluid} alt={edge.node.image.description}/>
             <h2>{edge.node.title}</h2>

@@ -25,14 +25,6 @@ export const PortfolioWrapper = styled.div`
         grid-row: 2;
     }
 
-    div:nth-child(1) {
-        background-color: red;
-    }
-
-    div:nth-child(2) {
-        background-color: blue;
-    }
-
 `;
 
 export const Card = styled.div`
