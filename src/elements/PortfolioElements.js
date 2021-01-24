@@ -10,6 +10,7 @@ export const PortfolioWrapper = styled.div`
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    transition: 0.4s ease;
 
     @media ${props => props.theme.breakpoints.wide} {
         grid-column: 3;
@@ -28,12 +29,17 @@ export const PortfolioWrapper = styled.div`
 `;
 
 export const Card = styled.div`
-    padding-bottom: 10px;
     border-radius: 15px 15px 10px 10px;
     margin: 20px;
+    background-color: #fff;
 
     h2 {
-        margin-left: 2rem;
+        margin: 1rem 0 1rem 2rem;
+        color: #111;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     img {
@@ -42,7 +48,7 @@ export const Card = styled.div`
 `
 
 export const CardImageWrapper = styled.div`
-    height: 275px;
+    height: 225px;
     width: 350px;
     overflow: hidden;
     position: relative;

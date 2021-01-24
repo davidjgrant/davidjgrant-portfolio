@@ -5,7 +5,7 @@ import { PortfolioCard, CardImage } from "../components"
 
 export const Portfolio = () => {
 
-  const [color, setColor] = useState(`yellow`);
+  const [color, setColor] = useState(`linear-gradient(to bottom, rgba(1,255,111,1) 0%, rgba(2,163,72,1) 100%)`);
 
   const data = useStaticQuery(graphql`
     query {
@@ -27,7 +27,7 @@ export const Portfolio = () => {
   `)
 
 return (
-    <PortfolioWrapper style={{ backgroundColor: color }}>
+    <PortfolioWrapper style={{ background: color }}>
       {data.projects.edges.map(edge => (
         <PortfolioCard key={edge.node.slug} color={edge.node.color} setColor={setColor}>
           <Link to={`/${edge.node.slug}`}>
