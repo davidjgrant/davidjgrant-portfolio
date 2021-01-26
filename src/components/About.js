@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import { AboutWrapper, AboutItems, ProfileImg, Logo, Info, SocialIcons, SocialIconLink, ContactButtons, CVButton, ContactButton, LinkedIn, Dribbble, Github, Medium, Spotify } from "../elements"
-
+import { AboutWrapper, AboutInfo, ProfileImg, AboutInfoWrapper } from "../elements"
+ 
 export const About = () => {
 
     const data = useStaticQuery(graphql`
@@ -12,37 +12,19 @@ export const About = () => {
                         src
                     }
                 }
-                logo {
-                    fluid {
-                        src
-                    }
-                }
-                description {
-                    description
+                longDescription {
+                    longDescription
                 }
             }
         }
     `)
 
-
     return (
         <AboutWrapper>
-            <AboutItems>
+            <AboutInfoWrapper>
                 <ProfileImg src={data.contentfulHomepageAbout.profile.fluid.src} alt="Profile Picture" title="Profile Picture" />
-                <Logo src={data.contentfulHomepageAbout.logo.fluid.src} alt="DavidJGrant Logo" title="DavidJGrant Logo" />
-                <Info>{data.contentfulHomepageAbout.description.description}</Info>
-                <SocialIcons>
-                    <SocialIconLink href="https://www.linkedin.com/in/davidjohngrant/" target="_blank" title="LinkedIn Icon"><LinkedIn /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Dribble Icon" ><Dribbble /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Github Icon" ><Github /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Medium Icon" ><Medium /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Spotify Icon" ><Spotify /></SocialIconLink>
-                </SocialIcons>
-                <ContactButtons>
-                    <CVButton to="/" target="_blank">CV</CVButton>
-                    <ContactButton to="/" target="_blank">Email</ContactButton>
-                </ContactButtons>
-            </AboutItems>
+                <AboutInfo>{data.contentfulHomepageAbout.longDescription.longDescription}</AboutInfo>
+            </AboutInfoWrapper>
         </AboutWrapper>
     )
 }

@@ -1,10 +1,13 @@
 import React from 'react'
+import { Container, HomepageFooter, About, AboutPics } from "../components"
 
 const AboutPage = () => {
     return (
-        <div>
-            This is my About
-        </div>
+        <Container>
+            <About />
+            <HomepageFooter />
+            <AboutPics />
+        </Container>
     )
 }
 

@@ -1,11 +1,11 @@
 import React from "react"
-import { Container, Portfolio, About, HomepageFooter } from "../components"
+import { Container, Portfolio, HomepageAbout, HomepageFooter } from "../components"
 
 const Home = () => {
 
   return (
     <Container>
-      <About />
+      <HomepageAbout />
       <HomepageFooter />
       <Portfolio />
     </Container>

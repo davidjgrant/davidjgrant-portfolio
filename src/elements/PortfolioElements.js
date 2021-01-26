@@ -10,7 +10,7 @@ export const PortfolioWrapper = styled.div`
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    transition: 0.4s ease;
+    transition: 0.4s;
 
     @media ${props => props.theme.breakpoints.wide} {
         grid-column: 3;
