@@ -6,30 +6,71 @@ export const AboutPicsWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media ${props => props.theme.breakpoints.tablet} {
+        grid-column: 2;
+    }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        grid-column: 1;
+        grid-row: 2;
+    }
 `
 
 export const Pictures = styled.div`
     position: relative;
-    width: 32rem;
+    width: 35rem;
     height: 40rem;
+
+    @media ${props => props.theme.breakpoints.tablet} {
+        width: 24rem;
+        height: 30rem;
+    }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        width: 20rem;
+        height: 22rem;
+    }
 `
 
 export const Picture1 = styled.div`
     width: 20rem;
-    height: 25rem;
+    height: auto;
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    @media ${props => props.theme.breakpoints.tablet} {
+        width: 14rem;
+    }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        width: 10rem;
+        top: 2rem;
+        left: 2rem;
+    }
 `
 
 export const Picture2 = styled.div`
     width: 20rem;
-    height: 25rem;
+    height: auto;
     position: absolute;
     z-index: 2;
-    top: 12rem;
-    left: 12rem;
+    top: 10rem;
+    left: 15rem;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    @media ${props => props.theme.breakpoints.tablet} {
+        top: 9rem;
+        left: 10rem;
+        width: 14rem;
+    }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        width: 10rem;
+        top: 5rem;
+        left: 9rem;
+    }
 `
