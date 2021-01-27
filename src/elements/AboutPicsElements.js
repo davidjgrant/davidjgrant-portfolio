@@ -11,7 +11,7 @@ export const AboutPicsWrapper = styled.div`
 export const Pictures = styled.div`
     position: relative;
     width: 32rem;
-    height: 35rem;
+    height: 40rem;
 `
 
 export const Picture1 = styled.div`

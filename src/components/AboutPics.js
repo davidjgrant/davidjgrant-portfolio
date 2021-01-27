@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { AboutPicsWrapper, Pictures, Picture1, Picture2 } from "../elements"
 
@@ -7,9 +8,14 @@ export const AboutPics = () => {
     const data = useStaticQuery(graphql`
         query {
             contentfulHomepageAbout {
-                photos {
+                photo1 {
                     fluid {
-                        src
+                        ...GatsbyContentfulFluid
+                    }
+                }
+                photo2 {
+                    fluid {
+                        ...GatsbyContentfulFluid
                     }
                 }
             }
@@ -19,9 +25,13 @@ export const AboutPics = () => {
     return (
         <AboutPicsWrapper>
             <Pictures>
-                {data.contentfulHomepageAbout.photos.map(photo => (
-                    <Picture1 src={photo.fluid.src} />
-                ))}
+                <Picture1>
+                    <Img fluid={data.contentfulHomepageAbout.photo1.fluid} />
+                </Picture1>
+                    
+                <Picture2>
+                    <Img fluid={data.contentfulHomepageAbout.photo2.fluid} />
+                </Picture2>
             </Pictures>
         </AboutPicsWrapper>
     )
