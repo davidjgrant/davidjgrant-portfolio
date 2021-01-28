@@ -1,6 +1,8 @@
 import React from "react"
+import { FaLinkedin, FaDribbble, FaGithub, FaMedium, FaSpotify } from 'react-icons/fa';
 import { useStaticQuery, graphql } from "gatsby"
-import { AboutWrapper, AboutItems, ProfileImg, Logo, Info, SocialIcons, SocialIconLink, ContactButtons, CVButton, ContactButton, LinkedIn, Dribbble, Github, Medium, Spotify } from "../elements"
+import { AboutWrapper, AboutItems, ProfileImg, Logo, Info, SocialIcons, SocialIconLink, ContactButtons, CVButton, ContactButton } from "../elements"
+
 
 export const HomepageAbout = () => {
 
@@ -32,11 +34,11 @@ export const HomepageAbout = () => {
                 <Logo src={data.contentfulHomepageAbout.logo.fluid.src} alt="DavidJGrant Logo" title="DavidJGrant Logo" />
                 <Info>{data.contentfulHomepageAbout.description.description}</Info>
                 <SocialIcons>
-                    <SocialIconLink href="https://www.linkedin.com/in/davidjohngrant/" target="_blank" title="LinkedIn Icon"><LinkedIn /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Dribble Icon" ><Dribbble /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Github Icon" ><Github /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Medium Icon" ><Medium /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Spotify Icon" ><Spotify /></SocialIconLink>
+                    <SocialIconLink href="https://www.linkedin.com/in/davidjohngrant/" target="_blank" title="LinkedIn Icon"><FaLinkedin /></SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" title="Dribble Icon" ><FaDribbble /></SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" title="Github Icon" ><FaGithub /></SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" title="Medium Icon" ><FaMedium /></SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" title="Spotify Icon" ><FaSpotify /></SocialIconLink>
                 </SocialIcons>
                 <ContactButtons>
                     <CVButton to="/" target="_blank">CV</CVButton>

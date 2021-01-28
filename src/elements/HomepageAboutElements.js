@@ -72,6 +72,7 @@ export const SocialIcons = styled.div`
     @media ${props => props.theme.breakpoints.mobile} {
         margin: 0.5rem;
     }
+    
 `;
 
 export const SocialIconLink = styled.a`
@@ -81,36 +82,12 @@ export const SocialIconLink = styled.a`
     @media ${props => props.theme.breakpoints.mobile} {
         margin: 0.5rem;
     }
-`;
 
-export const LinkedIn = styled.img`
-    background-color: lightblue;
-    width: 40px;
-    height: 40px;
-`;
-
-export const Dribbble = styled.img`
-    background-color: pink;
-    width: 40px;
-    height: 40px;
-`;
-
-export const Github = styled.img`
-    background-color: black;
-    width: 40px;
-    height: 40px;
-`;
-
-export const Medium = styled.img`
-    background-color: black;
-    width: 40px;
-    height: 40px;
-`;
-
-export const Spotify = styled.img`
-    background-color: lightgreen;
-    width: 40px;
-    height: 40px;
+    svg {
+        height: 2rem;
+        width: 2rem;
+        color: ${props => props.theme.colors.dark1};
+    }
 `;
 
 export const ContactButtons = styled.div`
