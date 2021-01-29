@@ -86,19 +86,58 @@ export const SocialIconLink = styled.a`
     svg {
         height: 2rem;
         width: 2rem;
-        color: ${props => props.theme.colors.dark1};
+        color: ${props => props.theme.colors.dark2};
     }
 `;
 
 export const ContactButtons = styled.div`
     display: flex;
     justify-content: center;
+    gap: 2rem;
 `;
 
 export const CVButton = styled(Link)`
-    margin-right: 2rem;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: ${props => props.theme.colors.dark2};
+    }
+
+    span {
+        color: ${props => props.theme.colors.dark2};
+    }
+
+    
 `;
 
 export const ContactButton = styled(Link)`
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
+    svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: ${props => props.theme.colors.dark2};
+    }
+
+    span {
+        color: ${props => props.theme.colors.dark2};
+    }
+
+    
 `;

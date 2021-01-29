@@ -1,5 +1,6 @@
 import React from "react"
 import { FaLinkedin, FaDribbble, FaGithub, FaMedium, FaSpotify } from 'react-icons/fa';
+import { GrDocumentDownload, GrMail } from "react-icons/gr";
 import { useStaticQuery, graphql } from "gatsby"
 import { AboutWrapper, AboutItems, ProfileImg, Logo, Info, SocialIcons, SocialIconLink, ContactButtons, CVButton, ContactButton } from "../elements"
 
@@ -41,8 +42,8 @@ export const HomepageAbout = () => {
                     <SocialIconLink href="/" target="_blank" title="Spotify Icon" ><FaSpotify /></SocialIconLink>
                 </SocialIcons>
                 <ContactButtons>
-                    <CVButton to="/" target="_blank">CV</CVButton>
-                    <ContactButton to="/" target="_blank">Email</ContactButton>
+                    <CVButton to="/" target="_blank"><GrMail /><span>CV</span></CVButton>
+                    <ContactButton to="/" target="_blank"><GrDocumentDownload /><span>Email</span></ContactButton>
                 </ContactButtons>
             </AboutItems>
         </AboutWrapper>

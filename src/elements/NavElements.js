@@ -29,22 +29,13 @@ export const NavLogo = styled(Link)`
 
 export const IconsWrapper = styled.div`
     display: flex;
-`
 
-export const ClipboardIcon = styled.div`
-    background-color: red;
-    height: 40px;
-    width: 40px;
+    svg {
+    height: 2rem;
+    width: 2rem;
     margin: 1rem;
     cursor: pointer;
+    color: ${props => props.theme.colors.dark2};
+    }
 `
-
-export const DarkModeIcon = styled.div`
-    background-color: blue;
-    height: 40px;
-    width: 40px;
-    margin: 1rem;
-    cursor: pointer;
-`
-
 
