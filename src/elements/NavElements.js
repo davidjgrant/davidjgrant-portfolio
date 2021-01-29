@@ -6,6 +6,7 @@ export const NavWrapper = styled.div`
     grid-row: 1;
 
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -17,6 +18,7 @@ export const NavWrapper = styled.div`
     @media ${props => props.theme.breakpoints.mobile} {
         padding: ${props => `${props.theme.spacings.medium} ${props.theme.spacings.large}`};
         grid-column: 1 / span 7;
+        flex-direction: column;
     }
 `
 
