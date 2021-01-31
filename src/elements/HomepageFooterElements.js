@@ -9,7 +9,7 @@ export const HomepageFooterWrapper = styled.footer`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #bada55;
+    background-color: ${props => props.theme.colors.light2};
 
     @media ${props => props.theme.breakpoints.wide} {
         grid-column: 2;

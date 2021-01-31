@@ -29,7 +29,9 @@ export const AboutInfoWrapper = styled.div`
 `
 
 export const AboutInfo = styled.p`
-    color: red;
+    color: #111;
+    line-height: 1.4;
+    font-size: 1rem;
 `
 
 export const AboutPicsWrapper = styled.div`
@@ -38,6 +40,7 @@ export const AboutPicsWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: ${props => props.theme.colors.light1};
 
     @media ${props => props.theme.breakpoints.tablet} {
         grid-column: 2;

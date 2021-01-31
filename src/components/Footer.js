@@ -1,10 +1,17 @@
 import React from "react"
-import { FooterWrapper } from "../elements"
+import { FooterWrapper, FooterItems, FooterItem, FooterLinks, FooterLink } from "../elements"
 
 export const Footer = () => {
     return (
         <FooterWrapper>
-            This is a footer.
+            <FooterItems>
+                <FooterItem>© 2021 DavidJGrant</FooterItem>
+                <FooterLinks>
+                    <FooterLink to="/AboutPage">About Me</FooterLink>
+                    <FooterLink to="/ContactPage">Contact Me</FooterLink>
+                    <FooterLink to="/" exact>Portfolio</FooterLink>
+                </FooterLinks>
+            </FooterItems> 
         </FooterWrapper>
     )
 }
