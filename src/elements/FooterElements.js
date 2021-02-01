@@ -17,6 +17,7 @@ export const FooterWrapper = styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
+    margin-top: 1rem;
 `
 
 export const FooterItems = styled.div`
