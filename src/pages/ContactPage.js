@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container, Contact, HomepageFooter, ContactForm } from "../components"
 
 const ContactPage = () => {
     return (

@@ -1,8 +1,8 @@
-import { styled } from "styled-components"
+import styled from "styled-components"
 
 export const ContactWrapper = styled.div`
     grid-column: 1;
-    grid-row: span 2;
+    grid-row: 1;
 
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ export const ContactWrapper = styled.div`
     }
 `
 
-export const ContactForm = styled.div`
+export const ContactFormWrapper = styled.div`
     grid-column: 2;
     grid-row: span 2;
     display: flex;
