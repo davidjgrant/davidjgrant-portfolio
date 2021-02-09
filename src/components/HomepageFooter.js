@@ -9,7 +9,6 @@ export const HomepageFooter = () => {
                 <FooterLinks>
                     <FooterLink to="/AboutPage">About Me</FooterLink>
                     <FooterLink to="/ContactPage">Contact Me</FooterLink>
-                    <FooterLink to="/" exact>Portfolio</FooterLink>
                 </FooterLinks>
             </FooterItems>       
         </HomepageFooterWrapper>
