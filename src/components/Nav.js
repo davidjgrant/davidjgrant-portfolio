@@ -18,13 +18,15 @@ export const Nav = () => {
             }
     `)
 
+    const url = window.location.href;
+
     return (
         <NavWrapper>
             <NavLogo to="/">
                 <img src={data.contentfulHomepageAbout.logo.fluid.src} alt="DavidJGrant Logo" />
             </NavLogo>
             <IconsWrapper>
-                <FaLink title="Copy to Clipboard" />
+                <FaLink onClick={() =>  navigator.clipboard.writeText(url)} title="Copy Link" />
                 <CgDarkMode title="Dark Mode" />
             </IconsWrapper>
         </NavWrapper>
