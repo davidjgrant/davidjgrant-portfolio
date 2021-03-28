@@ -5,7 +5,6 @@ export const FeatureImageWrapper = styled.div`
     grid-row: 3;
     overflow: hidden;
     position: relative;
-    margin: 2rem 0;
 
     @media ${props => props.theme.breakpoints.tablet} {
         grid-column: 2 / span 6;

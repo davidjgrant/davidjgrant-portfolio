@@ -17,6 +17,7 @@ export const HeaderWrapper = styled.div`
 
 export const HeaderTitle = styled.h1`
     text-align: center;
+    font-size: 2.5rem;
 `
 export const HeaderAuthor = styled.div`
     display: flex;
@@ -37,4 +38,21 @@ export const HeaderAuthorName = styled.h3`
 `
 
 export const HeaderPublished = styled.p`
+`
+
+export const HeaderTags = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    list-style-type: none;
+    margin: auto 0 2rem 0;
+    font-weight: 600;
+    line-height: 1.5;
+`
+
+export const HeaderTag = styled.li`
+    margin: 0px 0.25rem;
+    text-decoration: none;
+    font-weight: 400;
 `

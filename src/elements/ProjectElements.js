@@ -4,7 +4,7 @@ export const ProjectContainerWrapper = styled.div`
     height: 100%;
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 4.2rem)) 1fr;
-    grid-template-rows: 10rem 6rem 30rem auto 4rem;
+    grid-template-rows: 10rem 10rem 30rem auto 4rem;
     gap: 0 2rem;
 
     @media ${props => props.theme.breakpoints.tablet} {
@@ -14,7 +14,7 @@ export const ProjectContainerWrapper = styled.div`
 
     @media ${props => props.theme.breakpoints.mobile} {
         grid-template-columns: 0.25rem repeat(6, 1fr) 0.25rem;
-        grid-template-rows: 10rem 6rem 20rem auto;
+        grid-template-rows: 10rem 12rem 20rem auto;
     }
 `
 

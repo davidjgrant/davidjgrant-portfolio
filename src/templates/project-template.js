@@ -3,13 +3,14 @@ import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
 import { Header, Project, FeatureImage, ProjectContainer } from "../components"
-import { HeaderAuthor, HeaderAuthorName, HeaderAuthorProfile, HeaderPublished, HeaderTitle, ProjectSubTitle, ProjectHeadingThree, ProjectImage } from "../elements"
+import { HeaderAuthor, HeaderAuthorName, HeaderAuthorProfile, HeaderPublished, HeaderTitle, HeaderTags, HeaderTag, ProjectSubTitle, ProjectHeadingThree, ProjectImage } from "../elements"
 
 export const query = graphql`
   query ($slug: String!) {
     project: contentfulPortfolio(slug: {eq: $slug }) {
       title
       published(formatString: "MMMM DD, YYYY")
+      tags
       author {
         name
         profile {
@@ -39,6 +40,7 @@ export const query = graphql`
 const projectTemplate = ({ data: { project } }) => {
 
   const featureImage = project.featureImage.fluid
+  const tags = project.tags
 
     return (
         
@@ -50,7 +52,11 @@ const projectTemplate = ({ data: { project } }) => {
                 <HeaderAuthorName>{project.author.name}</HeaderAuthorName>
                 <HeaderPublished>· {project.published}</HeaderPublished>
               </HeaderAuthor>
-              
+              <HeaderTags>Roles: 
+                {tags.map((tag) => (
+                  <HeaderTag>{tag} ·</HeaderTag>
+                ))}
+              </HeaderTags>
             </Header>
             <FeatureImage fluid={featureImage} />
             <Project>
