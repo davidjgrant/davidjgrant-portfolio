@@ -23,6 +23,11 @@ export const HomepageAbout = () => {
                 description {
                     description
                 }
+                cv {
+                    file {
+                        url
+                    }
+                }
             }
         }
     `)
@@ -36,14 +41,14 @@ export const HomepageAbout = () => {
                 <Info>{data.contentfulHomepageAbout.description.description}</Info>
                 <SocialIcons>
                     <SocialIconLink href="https://www.linkedin.com/in/davidjohngrant/" target="_blank" title="LinkedIn Icon"><FaLinkedin /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Dribble Icon" ><FaDribbble /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Github Icon" ><FaGithub /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Medium Icon" ><FaMedium /></SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" title="Spotify Icon" ><FaSpotify /></SocialIconLink>
+                    <SocialIconLink href="https://dribbble.com/davidjohngrant" target="_blank" title="Dribble Icon" ><FaDribbble /></SocialIconLink>
+                    <SocialIconLink href="https://github.com/davidjohngrant" target="_blank" title="Github Icon" ><FaGithub /></SocialIconLink>
+                    <SocialIconLink href="https://medium.com/@DavidJohnGrant" target="_blank" title="Medium Icon" ><FaMedium /></SocialIconLink>
+                    <SocialIconLink href="https://open.spotify.com/user/djgrant_" target="_blank" title="Spotify Icon" ><FaSpotify /></SocialIconLink>
                 </SocialIcons>
                 <ContactButtons>
-                    <CVButton to="/" target="_blank"><GrMail /><span>CV</span></CVButton>
-                    <ContactButton to="/" target="_blank"><GrDocumentDownload /><span>Email</span></ContactButton>
+                    <CVButton href={data.contentfulHomepageAbout.cv.file.url} target="_blank"><GrDocumentDownload /><span>CV</span></CVButton>
+                    <ContactButton href="mailto:davidgrant132@gmail.com" target="_top"><GrMail /><span>Email</span></ContactButton>
                 </ContactButtons>
             </AboutItems>
         </AboutWrapper>

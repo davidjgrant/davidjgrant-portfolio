@@ -16,7 +16,7 @@ export const HomepageFooter = () => {
                 <FooterItem>© {year} <FooterLink to="/">DavidJGrant</FooterLink></FooterItem>
                 <FooterLinks>
                     {location.pathname !== '/AboutPage' && (<FooterLink to="/AboutPage">About Me</FooterLink>)}
-                    {location.pathname !== '/ContactPage' && (<FooterLink to="/ContactPage">Contact Me</FooterLink>)}
+                    {/* {location.pathname !== '/ContactPage' && (<FooterLink to="/ContactPage">Contact Me</FooterLink>)} */}
                 </FooterLinks>
             </FooterItems>       
         </HomepageFooterWrapper>

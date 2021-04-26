@@ -26,8 +26,8 @@ export const Nav = () => {
                 <img src={data.contentfulHomepageAbout.logo.fluid.src} alt="DavidJGrant Logo" />
             </NavLogo>
             <IconsWrapper>
-                <FaLink onClick={() =>  navigator.clipboard.writeText(url)} title="Copy Link" />
-                <CgDarkMode title="Dark Mode" />
+                <FaLink onClick={() =>  navigator.clipboard.writeText(url)} title="Copy URL to Clipboard" />
+                {/* <CgDarkMode title="Switch to Dark Mode" /> */}
             </IconsWrapper>
         </NavWrapper>
     )

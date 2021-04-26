@@ -27,12 +27,6 @@ export const query = graphql`
       bodyRichText {
         json
       }
-      seo {
-        title
-        description {
-          description
-      }
-    }
   }
 }
 `

@@ -12,7 +12,7 @@ export const Footer = () => {
                 <FooterItem>© {year} <FooterLink to="/">DavidJGrant</FooterLink></FooterItem>
                 <FooterLinks>
                     <FooterLink to="/AboutPage">About Me</FooterLink>
-                    <FooterLink to="/ContactPage">Contact Me</FooterLink>
+                    {/* <FooterLink to="/ContactPage">Contact Me</FooterLink> */}
                 </FooterLinks>
             </FooterItems> 
         </FooterWrapper>

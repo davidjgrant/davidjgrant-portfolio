@@ -96,7 +96,7 @@ export const ContactButtons = styled.div`
     gap: 2rem;
 `;
 
-export const CVButton = styled(Link)`
+export const CVButton = styled.a`
     background-color: white;
     padding: 1rem 2rem;
     border-radius: 10%;

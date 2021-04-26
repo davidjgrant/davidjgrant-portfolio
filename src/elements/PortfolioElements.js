@@ -60,8 +60,8 @@ export const CardImageWrapper = styled.div`
     }
 
     @media ${props => props.theme.breakpoints.tablet} {
-        height: 250px;
-        width: 325px;
+        height: 200px;
+        width: 250px;
     }
 
     @media ${props => props.theme.breakpoints.mobile} {

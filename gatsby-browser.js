@@ -14,6 +14,15 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         background-color: ${props => props.theme.colors.light1};
     }
+
+    a:link, :visited {
+        color: ${props => props.theme.colors.dark2};
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
 `
 
 export const wrapRootElement = ({ element }) => (

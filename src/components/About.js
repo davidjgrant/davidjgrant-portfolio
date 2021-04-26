@@ -23,7 +23,7 @@ export const About = () => {
         <AboutWrapper>
             <AboutInfoWrapper>
                 <ProfileImg src={data.contentfulHomepageAbout.profile.fluid.src} alt="Profile Picture" title="Profile Picture" />
-                <AboutInfo>{data.contentfulHomepageAbout.longDescription.longDescription}</AboutInfo>
+                <AboutInfo>{data.contentfulHomepageAbout.longDescription.longDescription.split('\n')}</AboutInfo>
             </AboutInfoWrapper>
         </AboutWrapper>
     )
