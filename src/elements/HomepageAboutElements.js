@@ -94,6 +94,10 @@ export const ContactButtons = styled.div`
     display: flex;
     justify-content: center;
     gap: 2rem;
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        gap: 3rem;
+    }
 `;
 
 export const CVButton = styled.a`
