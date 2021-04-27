@@ -5,7 +5,7 @@ import { PortfolioCard, CardImage } from "../components"
 
 export const Portfolio = () => {
 
-  const [color, setColor] = useState(`linear-gradient(to bottom, rgba(1,255,111,1) 0%, rgba(2,163,72,1) 100%)`);
+  const [color, setColor] = useState(`linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)`);
 
   const data = useStaticQuery(graphql`
     query {
