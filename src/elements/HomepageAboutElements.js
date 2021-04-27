@@ -104,7 +104,11 @@ export const CVButton = styled.a`
     align-items: center;
     gap: 1rem;
     text-decoration: none;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: ${props => props.theme.shadows.shadow1};
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        padding: 1rem;
+    }
 
     svg {
         height: 1.5rem;
@@ -127,7 +131,11 @@ export const ContactButton = styled(Link)`
     align-items: center;
     gap: 1rem;
     text-decoration: none;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: ${props => props.theme.shadows.shadow1};
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        padding: 1rem;
+    }
 
     svg {
         height: 1.5rem;

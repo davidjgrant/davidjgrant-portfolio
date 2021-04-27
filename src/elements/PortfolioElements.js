@@ -32,6 +32,7 @@ export const Card = styled.div`
     border-radius: 15px 15px 10px 10px;
     margin: 20px;
     background-color: #fff;
+    box-shadow: ${props => props.theme.shadows.shadow2};
 
     h2 {
         margin: 1rem 0 1rem 2rem;
