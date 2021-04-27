@@ -4,7 +4,7 @@ export const ProjectContainerWrapper = styled.div`
     height: 100%;
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 4.2rem)) 1fr;
-    grid-template-rows: 10rem 10rem 30rem auto 4rem;
+    grid-template-rows: 10rem 10rem 30rem auto 8rem;
     gap: 0 2rem;
 
     @media ${props => props.theme.breakpoints.tablet} {
@@ -36,7 +36,7 @@ export const ProjectWrapper = styled.main`
     }
 
     p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.5;
         margin-top: 1rem;
         color: #08080B;

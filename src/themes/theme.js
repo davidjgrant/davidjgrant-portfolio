@@ -6,14 +6,14 @@ export default {
     colors: {
         main1: "hsl(207,70%,59%)",
         main2: "hsl(207,70%,94%)",
-        light1: "hsl(0,0%,92%)",
+        light1: "hsl(0,0%,94%)",
         light2: "hsl(0,0%,97%)",
         dark1: "hsl(227,2%,26%)",
         dark2: "hsl(227,2%,10%)",
     },
     breakpoints: {
         mobile: "only screen and (max-width: 50rem)",
-        tablet: "only screen and (max-width: 65rem)",
+        tablet: "only screen and (max-width: 100rem)",
         wide: "only screen and (min-width: 130rem)",
     },
     spacings: {

@@ -49,7 +49,8 @@ export const Card = styled.div`
 
 export const CardImageWrapper = styled.div`
     height: 225px;
-    width: 350px;
+    width: 300px;
+    max-width: 350px;
     overflow: hidden;
     position: relative;
     border-radius: 10px 10px 0 0;
@@ -60,8 +61,8 @@ export const CardImageWrapper = styled.div`
     }
 
     @media ${props => props.theme.breakpoints.tablet} {
-        height: 200px;
-        width: 250px;
+        height: 125px;
+        width: 150px;
     }
 
     @media ${props => props.theme.breakpoints.mobile} {

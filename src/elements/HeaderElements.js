@@ -18,6 +18,7 @@ export const HeaderWrapper = styled.div`
 export const HeaderTitle = styled.h1`
     text-align: center;
     font-size: 2.5rem;
+    font-weight: 700;
 `
 export const HeaderAuthor = styled.div`
     display: flex;
