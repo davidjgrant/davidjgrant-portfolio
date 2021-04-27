@@ -62,8 +62,8 @@ export const CardImageWrapper = styled.div`
     }
 
     @media ${props => props.theme.breakpoints.tablet} {
-        height: 125px;
-        width: 150px;
+        height: 140px;
+        width: 200px;
     }
 
     @media ${props => props.theme.breakpoints.mobile} {
