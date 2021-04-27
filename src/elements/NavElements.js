@@ -16,7 +16,7 @@ export const NavWrapper = styled.div`
     }
 
     @media ${props => props.theme.breakpoints.mobile} {
-        padding: ${props => `${props.theme.spacings.medium} ${props.theme.spacings.large}`};
+        padding: ${props => `${props.theme.spacings.medium} ${props.theme.spacings.small}`};
         grid-column: 1 / span 7;
         flex-direction: column;
     }

@@ -6,12 +6,12 @@ export const HeaderWrapper = styled.div`
     grid-row: 2;
 
     @media ${props => props.theme.breakpoints.tablet} {
-        grid-column: 2 / span 6;
+        grid-column: 2 / span 7;
     }
 
     @media ${props => props.theme.breakpoints.mobile} {
-        padding: ${props => `${props.theme.spacings.medium} ${props.theme.spacings.large}`};
-        grid-column: 1 / span 7;
+        padding: ${props => `${props.theme.spacings.medium} ${props.theme.spacings.xSmall}`};
+        grid-column: 1 / span 8;
     }
 `
 
@@ -25,6 +25,10 @@ export const HeaderAuthor = styled.div`
     align-items: center;
     justify-content: center;
     color: #1b1b1b;
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        margin-bottom: 1rem;
+    }
 `
 
 export const HeaderAuthorProfile = styled.img`

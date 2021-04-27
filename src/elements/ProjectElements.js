@@ -14,7 +14,8 @@ export const ProjectContainerWrapper = styled.div`
 
     @media ${props => props.theme.breakpoints.mobile} {
         grid-template-columns: 0.25rem repeat(6, 1fr) 0.25rem;
-        grid-template-rows: 10rem 12rem 20rem auto;
+        grid-template-rows: 10rem 15rem 20rem auto;
+        grid-gap: 0;
     }
 `
 
@@ -32,7 +33,7 @@ export const ProjectWrapper = styled.main`
     }
 
     @media ${props => props.theme.breakpoints.mobile} {
-        padding: ${props => `${props.theme.spacings.medium} ${props.theme.spacings.large}`};
+        padding: ${props => `${props.theme.spacings.medium} ${props.theme.spacings.medium}`};
     }
 
     p {
