@@ -23,8 +23,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `roboto/:300,700`,
-          `muli/:400,700`,
+          `roboto/:400,500,700`,
+          `muli/:400,500,700`,
         ],
         display: "swap",
       },
