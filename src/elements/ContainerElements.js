@@ -16,6 +16,6 @@ export const ContainerWrapper = styled.main`
 
     @media ${props => props.theme.breakpoints.mobile} {
         grid-template-columns: 1fr;
-        grid-template-rows: 4fr auto 1fr;
+        grid-template-rows: 4fr 6fr 1fr;
     }
 `;

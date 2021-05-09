@@ -33,7 +33,10 @@ export const Card = styled.div`
     border-radius: 15px 15px 10px 10px;
     background-color: #fff;
     box-shadow: ${props => props.theme.shadows.shadow2};
-    margin: 1rem;
+
+    @media ${props => props.theme.breakpoints.tablet} {
+        margin: 1rem;
+    }
 
     h2 {
         margin: 1rem 0 1rem 2rem;
@@ -47,6 +50,7 @@ export const Card = styled.div`
     img {
         border-radius: 10px 10px 0 0;
     }
+    
 `
 
 export const CardImageWrapper = styled.div`
