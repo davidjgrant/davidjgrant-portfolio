@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const NavWrapper = styled.div`
+export const NavWrapper = styled.nav`
     grid-column: 2 / span 12;
     grid-row: 1;
 

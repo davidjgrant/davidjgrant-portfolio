@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ProjectContainerWrapper = styled.div`
+export const ProjectContainerWrapper = styled.main`
     height: 100%;
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 4.2rem)) 1fr;
@@ -19,7 +19,7 @@ export const ProjectContainerWrapper = styled.div`
     }
 `
 
-export const ProjectWrapper = styled.main`
+export const ProjectWrapper = styled.article`
     grid-column: 2 / span 12;
     grid-row: 4;
     display: flex;

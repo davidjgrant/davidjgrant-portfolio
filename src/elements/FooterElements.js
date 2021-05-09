@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const FooterWrapper = styled.div`
+export const FooterWrapper = styled.footer`
     grid-column: 2 / span 12;
     grid-row: 5;
 
@@ -23,17 +23,15 @@ export const FooterWrapper = styled.div`
 export const FooterItems = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    color: ${props => props.theme.colors.dark2};
     align-items: center;
-    padding: 20px;
+    
 
     @media ${props => props.theme.breakpoints.mobile} {
         flex-direction: column;
     }
 `
 export const FooterLinks = styled.div`
-    display: flex;
-    flex-direction: row;
 
     @media ${props => props.theme.breakpoints.mobile} {
         margin-top: 10px;
@@ -47,5 +45,4 @@ export const FooterItem = styled.div`
 export const FooterLink = styled(Link)`
     margin: 0 10px;
     text-decoration: none;
-    color: 111;
 `

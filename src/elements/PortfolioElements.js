@@ -1,16 +1,15 @@
 import styled from "styled-components"
 
-export const PortfolioWrapper = styled.div`
-    height: 100%;
+export const PortfolioWrapper = styled.section`
+    height: auto;
     grid-column: 2;
     grid-row: span 2;
     display: flex;
-    flex-direction: row;
     flex-flow: wrap;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
     align-items: center;
-    transition: 0.4s ease;
+    transition: all 0.4s ease;
 
     @media ${props => props.theme.breakpoints.wide} {
         grid-column: 3;
@@ -19,18 +18,20 @@ export const PortfolioWrapper = styled.div`
     @media ${props => props.theme.breakpoints.tablet} {
         grid-column: 2;
         grid-row: 1 span 2;
+        gap: 2rem;
     }
 
     @media ${props => props.theme.breakpoints.mobile} {
         grid-column: 1;
         grid-row: 2;
+        gap: 1rem;
+        padding: 1rem;
     }
 
 `;
 
 export const Card = styled.div`
     border-radius: 15px 15px 10px 10px;
-    margin: 20px;
     background-color: #fff;
     box-shadow: ${props => props.theme.shadows.shadow2};
 
@@ -49,25 +50,16 @@ export const Card = styled.div`
 `
 
 export const CardImageWrapper = styled.div`
-    height: 225px;
     width: 300px;
     max-width: 350px;
     overflow: hidden;
     position: relative;
-    border-radius: 10px 10px 0 0;
 
     @media ${props => props.theme.breakpoints.wide} {
-        height: 400px;
         width: 500px;
     }
 
     @media ${props => props.theme.breakpoints.tablet} {
-        height: 140px;
         width: 200px;
-    }
-
-    @media ${props => props.theme.breakpoints.mobile} {
-        height: 200px;
-        width: 280px;
     }
 `

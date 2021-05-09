@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const AboutWrapper = styled.div`
+export const AboutWrapper = styled.section`
     height: 100%;
     grid-column: 1;
     grid-row: 1;
@@ -25,26 +25,25 @@ export const AboutWrapper = styled.div`
     }
 `;
 
-export const AboutItems = styled.div`
+export const AboutItems = styled.article`
+    width: 30rem;
     text-align: center;
-    max-width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
+    padding: 2rem 0;
 
     @media ${props => props.theme.breakpoints.wide} {
-        max-width: 30rem;
+        width: 30rem;
     }
 
     @media ${props => props.theme.breakpoints.tablet} {
-        max-width: 25rem;
+        width: 20rem;
     }
 
     @media ${props => props.theme.breakpoints.mobile} {
-        max-width: 18rem;
+        width: 20rem;
     }
-
 `;
 
 export const ProfileImg = styled.img`
@@ -61,7 +60,8 @@ export const Logo = styled.img`
 `;
 
 export const Info = styled.p`
-    line-height: 1.4;
+    line-height: 1.5;
+    letter-spacing: .25px;
 `;
 
 export const SocialIcons = styled.div`
@@ -76,7 +76,6 @@ export const SocialIcons = styled.div`
 `;
 
 export const SocialIconLink = styled.a`
-    text-decoration: none;
     margin: 0 1rem;
     
     @media ${props => props.theme.breakpoints.mobile} {
@@ -91,22 +90,18 @@ export const SocialIconLink = styled.a`
 `;
 
 export const ContactButtons = styled.div`
+    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-
-    @media ${props => props.theme.breakpoints.mobile} {
-        gap: 3rem;
-    }
+    justify-content: space-evenly;
+    margin: 1rem;
 `;
 
 export const CVButton = styled.a`
     background-color: white;
-    padding: 1rem 2rem;
-    border-radius: 10%;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
     display: flex;
     align-items: center;
-    gap: 1rem;
     text-decoration: none;
     box-shadow: ${props => props.theme.shadows.shadow1};
 
@@ -117,6 +112,7 @@ export const CVButton = styled.a`
     svg {
         height: 1.5rem;
         width: 1.5rem;
+        margin-right: .5rem;
         color: ${props => props.theme.colors.dark2};
     }
 
@@ -129,11 +125,10 @@ export const CVButton = styled.a`
 
 export const ContactButton = styled(Link)`
     background-color: white;
-    padding: 1rem 2rem;
-    border-radius: 10%;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
     display: flex;
     align-items: center;
-    gap: 1rem;
     text-decoration: none;
     box-shadow: ${props => props.theme.shadows.shadow1};
 
@@ -144,6 +139,7 @@ export const ContactButton = styled(Link)`
     svg {
         height: 1.5rem;
         width: 1.5rem;
+        margin-right: .5rem;
         color: ${props => props.theme.colors.dark2};
     }
 
