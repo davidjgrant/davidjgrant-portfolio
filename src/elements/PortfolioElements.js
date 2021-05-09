@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const PortfolioWrapper = styled.section`
-    height: 100vh;
+    height: 100%;
     grid-column: 2;
     grid-row: span 2;
     display: flex;
@@ -33,10 +33,7 @@ export const Card = styled.div`
     border-radius: 15px 15px 10px 10px;
     background-color: #fff;
     box-shadow: ${props => props.theme.shadows.shadow2};
-
-    @media ${props => props.theme.breakpoints.tablet} {
-        margin: 1rem;
-    }
+    margin: 1rem;
 
     h2 {
         margin: 1rem 0 1rem 2rem;
