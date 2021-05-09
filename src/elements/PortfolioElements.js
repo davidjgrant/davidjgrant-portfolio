@@ -47,6 +47,10 @@ export const Card = styled.div`
     img {
         border-radius: 10px 10px 0 0;
     }
+
+    @media ${props => props.theme.breakpoints.mobile} {
+        padding: 1rem;
+    }
 `
 
 export const CardImageWrapper = styled.div`
