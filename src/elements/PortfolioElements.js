@@ -25,7 +25,7 @@ export const PortfolioWrapper = styled.section`
         grid-column: 1;
         grid-row: 2;
         gap: 1rem;
-        padding: 1rem;
+        margin: 1rem;
     }
 
 `;
@@ -46,10 +46,6 @@ export const Card = styled.div`
 
     img {
         border-radius: 10px 10px 0 0;
-    }
-
-    @media ${props => props.theme.breakpoints.mobile} {
-        padding: 1rem;
     }
 `
 
