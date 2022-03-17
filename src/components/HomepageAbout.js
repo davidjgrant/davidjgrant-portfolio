@@ -48,7 +48,7 @@ export const HomepageAbout = () => {
                 </SocialIcons>
                 <ContactButtons>
                     <CVButton href={data.contentfulHomepageAbout.cv.file.url} target="_blank"><FaFileAlt /><span>CV</span></CVButton>
-                    <ContactButton href="mailto:davidgrant132@gmail.com" target="_top"><GrMail /><span>Email</span></ContactButton>
+                    <ContactButton href="mailto:hello@davidjgrant.com" target="_top"><GrMail /><span>Email</span></ContactButton>
                 </ContactButtons>
             </AboutItems>
         </AboutWrapper>
